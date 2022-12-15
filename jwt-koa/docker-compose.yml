@@ -10,6 +10,9 @@ services:
       - /home/node/app/node_modules
     depends_on:
       - redis
+    environment:
+      REDIS_HOSTNAME: redis
+      REDIS_PORT: 6379
   redis:
     image: "redis:alpine"
     container_name: redis
